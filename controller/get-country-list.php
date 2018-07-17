@@ -5,7 +5,7 @@ include "database.php";
 
 $tb1 = "countries";
 
-$strSQL = "SELECT * FROM $tb1 WHERE 1 ORDER BY country_name";
+$strSQL = "SELECT * FROM $tb1 WHERE 1";
 $result = select($conn, $strSQL);
 
 if($result){
