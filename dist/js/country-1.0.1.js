@@ -9,7 +9,11 @@ var countryjs = {
                .always(function(snap){
                  if((snap != '') && (snap != null) && (snap.length > 0)){
                    snap.forEach(function(item){
-                     $(ele.element).append('<option value="' + item.country_code + '">' + item.country_name + '</option>')
+                     if(ele.value == 'name'){
+                       $(ele.element).append('<option value="' + item.country_name + '">' + item.country_name + '</option>')
+                     }else{
+                       $(ele.element).append('<option value="' + item.country_code + '">' + item.country_name + '</option>')
+                     }
                    })
                  }
                })
